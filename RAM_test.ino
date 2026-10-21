@@ -2,6 +2,10 @@
 /// RAM chip write enable is active low
 
 void setup() {
+
+  int addrOut[4] = {13, 12, 11, 10};
+  int dataOut[8] = {7, 6, 5, 4, A0, A1, A2, A3};
+  
   for (int i : addrOut){   /// Initial address 0000
     pinMode(i, OUTPUT);
     digitalWrite(i, LOW);
